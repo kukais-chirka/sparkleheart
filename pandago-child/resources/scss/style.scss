@@ -101,6 +101,18 @@ iframe{
 .justify-content-between{
     justify-content: space-between;
 }
+.active {
+    font-weight: 500 !important;
+    color: #060606 !important;
+    border-bottom: 3px solid $orange !important;
+    text-decoration: none !important;
+    font-weight: bold !important;
+}
+
+.active-footer{
+    border-bottom: 3px solid #ffa800 !important;
+    text-decoration: none;
+}
 
 .d-sm-flex{
 // display: flex;

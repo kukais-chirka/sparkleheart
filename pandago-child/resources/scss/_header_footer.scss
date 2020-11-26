@@ -146,10 +146,10 @@
 
 
 
-
 .footer { // both footer
     background-color: $blue;
     position: relative;
+
     .regularText{
         color: $white;
     }
@@ -216,6 +216,7 @@
             line-height: 22px;
             &:hover {
                 color: $yellow;
+                text-decoration: none;
             }
         }
     } //desktopfooter

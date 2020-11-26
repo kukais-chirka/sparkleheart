@@ -55,6 +55,17 @@ img {
   -ms-flex-pack: justify;
   justify-content: space-between; }
 
+.active {
+  font-weight: 500 !important;
+  color: #060606 !important;
+  border-bottom: 3px solid #ffa800 !important;
+  text-decoration: none !important;
+  font-weight: bold !important; }
+
+.active-footer {
+  border-bottom: 3px solid #ffa800 !important;
+  text-decoration: none; }
+
 .footer-container {
   padding: 30px 63px 20px 62px; }
 
@@ -213,6 +224,9 @@ h4 {
     h4 {
       font-size: 24px;
       line-height: 44px; } }
+
+a:hover, a:active, a:focus, a:visited {
+  text-decoration: none !important; }
 
 .mediumText {
   font-size: 24px;
@@ -431,7 +445,8 @@ h4 {
       font-size: 18px;
       line-height: 22px; }
       .footer .desktop-footer a:hover {
-        color: #ffcb66; }
+        color: #ffcb66;
+        text-decoration: none; }
   .footer .mobile-footer {
     display: none; }
     .footer .mobile-footer .regularText.mob {
@@ -1826,6 +1841,26 @@ h4 {
     max-width: 140px;
     height: 48px;
     font-size: 18px; } }
+
+#scrollBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99999999;
+  font-size: 32px;
+  border: none;
+  outline: none;
+  background-color: #ffa800;
+  color: white;
+  cursor: pointer;
+  padding: 17px;
+  border-radius: 50%; }
+  @media screen and (max-width: 700px) {
+    #scrollBtn {
+      right: 12px;
+      padding: 15px;
+      font-size: 14px; } }
 
 
 /*# sourceMappingURL=style.css.map*/

@@ -33,7 +33,9 @@ h4{
     }
 }
 
-
+a:hover, a:active, a:focus, a:visited{
+    text-decoration: none !important; 
+}
 
 .mediumText {
     font-size: 24px;
