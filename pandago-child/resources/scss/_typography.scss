@@ -1,0 +1,54 @@
+p{margin: 0px;}
+h1,h2,h3,h4,h5 {font-family: headerFont;
+          margin-bottom: 0px;}
+
+h1 {font-size: 48px!important;
+    color: $blue;
+    margin: 112px 0px 60px;
+    @include tablet{
+        margin: 102px 0px 60px;
+    }
+    @include mobile{
+        font-size: 36px!important;
+        line-height: 53px;
+        margin: 65px 0px 30px;
+    }}
+
+h2 {font-size: 30px;
+    line-height: 35px;}
+.title-mobile{
+    @include mobile{
+        font-size: 18px;
+        line-height:27px;
+    }
+} 
+h3 {font-size: 24px;
+    line-height: 36px;}
+h4{
+    font-size: 30px;
+    line-height: 44px;
+    @include mobile{
+        font-size: 24px;
+        line-height: 44px;
+    }
+}
+
+
+
+.mediumText {
+    font-size: 24px;
+    font-family: montMediumFont; //medium
+    font-weight: 500;
+}
+.regularText, a {
+    font-size: 18px;
+    font-family: montRegularFont; //regular
+    line-height: 22px;
+    color: $blue;
+}
+.regularText-mobile{
+    @include mobile{
+        font-size: 12px;
+        line-height:15px;
+    }
+} 
