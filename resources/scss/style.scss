@@ -1,0 +1,145 @@
+// Theme variables
+// Layout
+// @import "../../node_modules/bootstrap/scss/bootstrap";
+
+// Size between columns
+$gutters: (
+	xl: 30px,
+	lg: 30px,
+	md: 30px,
+	sm: 30px,
+	xs: 30px
+);
+
+// Typography
+
+@font-face {
+    font-family: headerFont;
+    src: url(../fonts/Oswald-Medium.woff);
+}
+@font-face {
+    font-family: montMediumFont;
+    src: url(../fonts/Montserrat-Medium.woff);
+}
+@font-face {
+    font-family: montRegularFont;
+    src: url(../fonts/Montserrat-Regular.woff);
+}
+
+$black: #0000;
+$blue: #2f4858;
+$orange: #ffa800;
+$yellow: #ffcb66;
+$white: #fff;
+
+$responsiveBar: 1100px;
+$tablet: 920px;
+$mobile: 700px;
+
+@mixin tablet {
+    @media screen and (max-width: #{$tablet}) {
+        @content;
+    }
+}
+@mixin mobile {
+    @media screen and (max-width: #{$mobile}) {
+        @content;
+    }
+}
+
+@mixin navigationBar {
+    @media screen and (max-width: #{$responsiveBar}) {
+        @content;
+    }
+}
+
+//Global 
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    outline: none!important; 
+    &:hover, &:focus, &:active{
+        outline: none;
+    }
+}
+html{scroll-behavior: smooth;}
+.container-fluid {padding: 0px;}
+img {
+    // width: 100%;
+    height: auto;
+}
+
+// .editor-styles-wrapper p {
+//     margin-top: 0px!important; 
+//     margin-bottom: 0px!important; 
+// }
+.editor-styles-wrapper h1 {
+    font-size: auto; 
+}
+iframe{
+    // position: relative!important;
+}
+
+
+//Global classes
+.relative{
+    position: relative;
+}
+// .d-flex{
+//     display: flex;
+// }
+// .text-center{
+//     text-align: center;
+// }
+// .text-right{
+//     text-align: right;
+// }
+// .flex-fill{
+//     flex: 1 1 auto;
+// }
+// .justify-content-between{
+//     justify-content: space-between;
+// }
+.active {
+    font-weight: 500 !important;
+    color: #060606 !important;
+    border-bottom: 3px solid $orange !important;
+    text-decoration: none !important;
+    font-weight: bold !important;
+}
+
+.active-footer{
+    border-bottom: 3px solid #ffa800 !important;
+    text-decoration: none;
+}
+
+.d-sm-flex{
+// display: flex;
+}
+//Responsive setup
+$breakpoints: (
+	xl: 1360px,
+	lg: 1100px,
+	md: 768px,
+	sm: 480px,
+	xs: 0
+);
+$breakpoint_xl: map-get($breakpoints, xl) - 1;
+$breakpoint_lg: map-get($breakpoints, lg) - 1;
+$breakpoint_md: map-get($breakpoints, md) - 1;
+$breakpoint_sm: map-get($breakpoints, sm) - 1;
+
+// Framework
+@import 'framework/framework_layout';
+@import 'framework/framework_page';
+@import 'framework/framework_print';
+@import 'framework/framework_visual';
+
+// Theme
+@import 'typography';
+@import 'header_footer';
+@import 'site_content';
+
+// ACF Blocks
+// @import '../../template-parts/blocks/blocks.scss';

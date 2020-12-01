@@ -1,1 +1,0 @@
-<?php _e( 'Izmanto \'child\' tēmu priekš izstrādes!', PANDAGO_TD ); // Blank on purpose, use child themes files for development. ?>
