@@ -76,8 +76,8 @@ $title2 = get_field('title-2');
 var businesses = <?php echo json_encode($businesses)  ?>; 
 var types      = <?php echo json_encode($types)  ?>; 
 </script>
-<script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA9mz10oVEkL2zyH-FtC_9rHIj1RzNQNOA&callback=initMap">
+<script defer  type='text/javascript' src="/wp-content/themes/pandago-child/template-parts/blocks/map/google-maps.js">
 </script> 
-<script defer type='text/javascript' src="/wp-content/themes/pandago-child/template-parts/blocks/map/google-maps.js">
+<script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA9mz10oVEkL2zyH-FtC_9rHIj1RzNQNOA&callback=initMap">
 </script> 
         <div id="map"></div>

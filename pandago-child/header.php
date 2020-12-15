@@ -1,7 +1,7 @@
 
 <?php wp_footer(); get_template_part( 'template-parts/head' ); ?>
 <!-- NavBar --> 
-<a href="#anchor" id="scrollBtn" title="Go Bot">&#8595;</a>     <!-- ANCHOR -->
+<a href="#down" id="scrollBtn" title="Go Bot">&#8595;</a>     <!-- ANCHOR -->
 
 <nav  class="nav-container relative">
     <a href="/"><img class="nav-img"  src="/wp-content/uploads/2020/10/BlackLogo-3.png"></a>
@@ -27,7 +27,6 @@
 <script defer>
 (function () {
   const currentLocation = location.href;
-  console.log(currentLocation);
   const menuItem = document.getElementsByClassName('nav-item');
   const menuLength = menuItem.length
     for ( i = 0; i < menuLength; i++){

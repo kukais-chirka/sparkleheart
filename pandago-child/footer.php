@@ -3,7 +3,7 @@
 
 
 <div id="footer" class="footer footer-container relative">
-<a id="anchor" style="position:absolute; top:-100vh;"></a>
+<a id="down" style="position:absolute; top:-100vh;"></a>
     <img class="vector-top" src="/wp-content/uploads/2020/10/Vector_blue.png" alt="Apgrauztā Mala"> <!--footer-->
     <div class="desktop-footer"><!--Footer For Desktop-->
         <div class="col1 d-flex flex-column justify-content-between"><!--col1-->
@@ -77,12 +77,9 @@
 <script defer>
 (function () {
   const currentLocation = location.href;
-  console.log(currentLocation);
   const menuItem = document.getElementsByClassName('nav-item');
   const menuLength = menuItem.length
     for ( i = 0; i < menuLength; i++){
-//   console.log(menuItem[i]);
-console.log(menuItem[i].href);
     if(menuItem[i].href === currentLocation){
       menuItem[i].className += " active-footer"
     }

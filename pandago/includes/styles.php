@@ -28,8 +28,8 @@ if ( ! function_exists( 'pandago_styles' ) ) {
       wp_enqueue_style( '404' );
 
       // Add Bootstrap grid
-      wp_register_style( 'bootstrap-grid', URL_PANDAGO_CSS . '/bootstrap-grid.css', array(), '4.1.3', 'all' );
-      wp_enqueue_style( 'bootstrap-grid' );
+      // wp_register_style( 'bootstrap-grid', URL_PANDAGO_CSS . '/bootstrap-grid.css', array(), '4.1.3', 'all' );
+      // wp_enqueue_style( 'bootstrap-grid' );
 
       // Add global helpers
       wp_register_style( 'pandago-helpers', URL_PANDAGO_CSS . '/helpers.css', array(),  PANDAGO_V, 'all' );

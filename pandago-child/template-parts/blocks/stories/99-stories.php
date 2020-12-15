@@ -48,14 +48,6 @@
                       <div  id="small-triangle-<?php echo $id ?>" class="triangle" ></div><!-- video-pause -->
                     </svg>
                   </div>
-
-                   <!-- <video onclick="playSmallVideo(<?php echo $id ?>)" class="small-video" id="small-video-<?php echo $id ?>" type="video/mp4" src="<?php echo $video ?>"></video>
-                    <svg  id="small-svg-box-<?php echo $id ?>" class="svg-box" onclick="playSmallVideo(<?php echo $id ?>)" width="100" height="100">  
-                      <circle class="circle" cx="50" cy="50" r="40" stroke="#FFA800" stroke-width="4" fill="#FFA800" />
-                      <circle class="mobCircle"  cx="50" cy="50" r="25" stroke="#FFA800" stroke-width="4" fill="#FFA800" />
-                      <div  id="small-triangle-<?php echo $id ?>" class="triangle" onclick="playSmallVideo(<?php echo $id ?>)"></div>
-                    </svg> -->
-
                    </div>
                </div>
               <h4><?php echo $name ?></h4>

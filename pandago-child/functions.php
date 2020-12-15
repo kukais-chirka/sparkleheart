@@ -43,7 +43,7 @@ function sparkle_project_scripts_include(){
     // wp_enqueue_script (  'child-script', get_stylesheet_directory_uri() . '/assets/theme.js');
   wp_enqueue_script( 'jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js');
 //   wp_enqueue_script(  'google_api', 'https://maps.googleapis.com/maps/api/js?key=AIzaSyA9mz10oVEkL2zyH-FtC_9rHIj1RzNQNOA&callback=initMap#deferload');
-  wp_enqueue_style('bootstrap_style', 'https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css');
+  wp_enqueue_style('bootstrap_style', 'https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap-grid.min.css');
     wp_enqueue_style (  'child-style',  get_stylesheet_directory_uri() . '/assets/css/style.css');
 
 //   wp_enqueue_script (  'child-scripts', get_stylesheet_directory_uri() . '/resources/scss/style.css');
@@ -81,7 +81,7 @@ function my_acf_init_block_types() {
             'category'          => 'formatting',
             'icon'              => file_get_contents( get_template_directory() . '/assets/svg/logo.svg' ),
             'keywords'          => array( 'video', 'video Player', 'Sparkle Heart' ),
-            'enqueue_style'     => 'https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css',
+            'enqueue_style'     => 'https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap-grid.min.css',
         ));
         acf_register_block_type(array(   // Text-Block
             'name'              => 'Text-Block',

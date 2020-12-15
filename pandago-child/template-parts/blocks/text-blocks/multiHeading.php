@@ -11,7 +11,7 @@ $width   = get_field('width');
 
 <!-- /////////////H1  p18px/////////////////////////////-->
 <?php if ($blockType === 'Head D=48px, M =36px; Paragr D=18px, M=12px'): ?>
-<div style="width:<?php echo $width ?>px" class="ideja-container mobile-container text-center "><!-- Heading and p -->  
+<div style="max-width:<?php echo $width ?>px" class="ideja-container mobile-container text-center "><!-- Heading and p -->  
         <h1 style="color:<?php echo $headColor ?>"><?php echo $headText ?></h1>
         <p class="regularText" style="color:<?php echo $pColor ?>">
             <?php echo $pText?>

@@ -77,9 +77,6 @@ img {
 .editor-styles-wrapper h1 {
     font-size: auto; 
 }
-iframe{
-    // position: relative!important;
-}
 
 
 //Global classes
@@ -89,9 +86,9 @@ iframe{
 // .d-flex{
 //     display: flex;
 // }
-// .text-center{
-//     text-align: center;
-// }
+.text-center{
+    text-align: center;
+}
 // .text-right{
 //     text-align: right;
 // }
@@ -114,9 +111,7 @@ iframe{
     text-decoration: none;
 }
 
-.d-sm-flex{
-// display: flex;
-}
+
 //Responsive setup
 $breakpoints: (
 	xl: 1360px,
