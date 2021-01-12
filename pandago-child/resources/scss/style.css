@@ -717,6 +717,13 @@ a:hover, a:active, a:focus, a:visited {
   -webkit-transition: all .5s;
   transition: all .5s;
   display: none;
+  transition: all .5s;
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
 .svg-box {
@@ -797,6 +804,11 @@ a:hover, a:active, a:focus, a:visited {
       grid-template-columns: 1fr 1fr;
 }
 
+.gallery-container-1 > div {
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+}
+
 .gallery-container-1 .vector-top {
   position: absolute;
   top: -16px;
@@ -854,6 +866,7 @@ a:hover, a:active, a:focus, a:visited {
     font-size: 12px;
   }
   .gallery-container-1 {
+    display: block;
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
         -ms-flex-direction: column-reverse;
@@ -907,6 +920,8 @@ a:hover, a:active, a:focus, a:visited {
   -webkit-box-direction: normal;
       -ms-flex-flow: row wrap;
           flex-flow: row wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
@@ -1218,6 +1233,8 @@ a:hover, a:active, a:focus, a:visited {
   -webkit-box-direction: normal;
       -ms-flex-flow: row wrap;
           flex-flow: row wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
@@ -1242,11 +1259,7 @@ a:hover, a:active, a:focus, a:visited {
   }
   .sponsorContainer .imgRow img {
     max-height: 80px;
-  }
-  .sponsorContainer .imgRow > div {
     max-width: 144px;
-    -ms-grid-column-align: center;
-        justify-self: center;
   }
 }
 
@@ -1259,11 +1272,9 @@ a:hover, a:active, a:focus, a:visited {
     grid-column-gap: 5px;
     grid-row-gap: 42px;
   }
-  .sponsorContainer .imgRow > div {
-    max-width: 130px;
-  }
   .sponsorContainer .imgRow img {
     max-height: 70px;
+    max-width: 130px;
   }
   .sponsorContainer .vector-top {
     top: -12px;
@@ -1324,6 +1335,9 @@ a:hover, a:active, a:focus, a:visited {
   background: -webkit-gradient(linear, left bottom, left top, color-stop(18.63%, rgba(47, 72, 88, 0.8)), color-stop(49.21%, rgba(47, 72, 88, 0)));
   background: linear-gradient(0deg, rgba(47, 72, 88, 0.8) 18.63%, rgba(47, 72, 88, 0) 49.21%);
   height: 705px;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1343,6 +1357,7 @@ a:hover, a:active, a:focus, a:visited {
 
 .big-picture-container .text-container {
   text-align: center;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1563,6 +1578,10 @@ a:hover, a:active, a:focus, a:visited {
     width: 160px;
     height: 185px;
   }
+}
+
+.dream-box .text-box {
+  max-width: 394px;
 }
 
 @media screen and (max-width: 700px) {
@@ -1897,6 +1916,8 @@ a:hover, a:active, a:focus, a:visited {
   -webkit-box-direction: normal;
       -ms-flex-flow: row wrap;
           flex-flow: row wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
@@ -2065,7 +2086,7 @@ a:hover, a:active, a:focus, a:visited {
 
 .custom-select {
   width: 100%;
-  height: 43px;
+  max-height: 43px;
   padding: 12px 60px 9px 15px;
   border: 1px solid rgba(196, 196, 196, 0.4);
   border-radius: 6px;
@@ -2158,14 +2179,16 @@ a:hover, a:active, a:focus, a:visited {
 }
 
 .stories-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: wrap;
+      flex-flow: wrap;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (160px)[auto-fit];
       grid-template-columns: repeat(auto-fit, 160px);
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  row-gap: 14px;
+  row-gap: 11px;
   -webkit-column-gap: 14px;
           column-gap: 14px;
   max-width: 1030px;
@@ -2176,6 +2199,9 @@ a:hover, a:active, a:focus, a:visited {
   background: url("/wp-content/uploads/2020/10/golden_bg.jpg");
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
+  margin: 3px;
+  max-width: 160px;
+  width: 100%;
 }
 
 .stories-container .story-box:hover, .stories-container .no-story:hover {
@@ -2222,6 +2248,8 @@ a:hover, a:active, a:focus, a:visited {
 
 .stories-container .no-story {
   height: 160px;
+  max-width: 160px;
+  width: 100%;
 }
 
 .stories-container .no-story:hover {
@@ -2253,6 +2281,9 @@ a:hover, a:active, a:focus, a:visited {
     -ms-grid-columns: (137px)[auto-fit];
         grid-template-columns: repeat(auto-fit, 137px);
     row-gap: 16px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   .stories-container .no-story {
     height: 137px;

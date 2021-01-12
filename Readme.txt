@@ -16,7 +16,7 @@ pandago-child folderī ir viss rakstītais kods tēmai.
 ------------------------------------------------
 
 Uz localhost man video strādā un iet (Home un Sapņu Banka),
-bet kad uzlieku uz domēna - neiet. Pieņemu, ka host vaina.
+bet kad uzlieku uz domēna - neiet. Pieņemu, ka host vaina. Errors  -  net::ERR_CONTENT_LENGTH_MISMATCH
 Pats pievienotais video sver tikai 10MB.
 ------------------------------------------------
 

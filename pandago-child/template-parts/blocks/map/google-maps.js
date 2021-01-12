@@ -1,6 +1,17 @@
+// function sleep(milliseconds) {
+//   const date = Date.now();
+//   let currentDate = null;
+//   do {
+//     currentDate = Date.now();
+//   } while (currentDate - date < milliseconds);
+// }
 
-
-var businessTypes = Object.keys(types).map((key) => [Number(key), types[key]]);  //Make Object to Array
+// sleep(7000);
+// console.log(types);
+var businessTypes = types; //Get value from google-map.php
+// var lol = Object.keys(types).map((key) => [Number(key), types[key]]);  //Make Object to Array
+// console.log(businessTypes);
+// console.log(lol);
  //MAP variables
  var map;
  var mapStyle = [   //KARTES STILS
@@ -129,7 +140,7 @@ var businessTypes = Object.keys(types).map((key) => [Number(key), types[key]]); 
    zoomInButton.style.width = '57px'; 
    zoomInButton.style.height = '57px';
    zoomInButton.style.marginBottom = '22px';
-   zoomInButton.style.backgroundColor = 'rgb(255, 168, 0, 0.9)';
+   zoomInButton.style.backgroundColor = '#ffa800';
    zoomInButton.style.borderStyle = 'solid';
    zoomInButton.style.borderColor = '#ffaa00';
    zoomInButton.style.borderWidth = '1px';
@@ -145,7 +156,7 @@ var businessTypes = Object.keys(types).map((key) => [Number(key), types[key]]); 
     zoomOutButton.style.width = '57px'; 
     zoomOutButton.style.height = '57px';
    //  zoomInButton.style.marginBottom = '22px';
-   zoomOutButton.style.backgroundColor = 'rgb(255, 168, 0, 0.9)';
+   zoomOutButton.style.backgroundColor = '#ffa800';
    zoomOutButton.style.borderStyle = 'solid';
    zoomOutButton.style.borderColor = '#ffaa00';
     zoomOutButton.style.borderWidth = '1px';
@@ -188,10 +199,10 @@ function initMap() {
    var zoomControl = new ZoomControl(zoomControlDiv, map);
    zoomControlDiv.index = 1;
    map.controls[google.maps.ControlPosition.RIGHT_BOTTOM].push(zoomControlDiv);
-   
+   console.log(businessTypes);
    for (i = 0; i < businessTypes.length; i++ ){
-    businessType = businessTypes[i][1].field_5fa1a5536bae7; // Uzņēmuma Veids Ēdināšana, Skaistumkopšana utt
-    businesses   = businessTypes[i][1].field_5fa1a6376bae8; // Uzņēmumi
+    businessType = businessTypes[i].field_5fa1a5536bae7; // Uzņēmuma Veids Ēdināšana, Skaistumkopšana utt
+    businesses   = businessTypes[i].field_5fa1a6376bae8; // Uzņēmumi
       for (a = 0; a < businesses.length; a++ ){
         businessName = businesses[a].field_5fa1a6846bae9; // Bussinesses names example, Purch, Kurts utt
         lat          = businesses[a].field_5fa1aa8d6baed; // Coordinates lat
@@ -234,8 +245,8 @@ function initMap() {
 
 
    for (i = 0; i < businessTypes.length; i++ ){
-    businessType = businessTypes[i][1].field_5fa1a5536bae7; // Uzņēmuma Veids Ēdināšana, Skaistumkopšana utt
-    businesses   = businessTypes[i][1].field_5fa1a6376bae8; // Uzņēmumi
+    businessType = businessTypes[i].field_5fa1a5536bae7; // Uzņēmuma Veids Ēdināšana, Skaistumkopšana utt
+    businesses   = businessTypes[i].field_5fa1a6376bae8; // Uzņēmumi
 
       for (a = 0; a < businesses.length; a++ ){
         businessName = businesses[a].field_5fa1a6846bae9; // Bussinesses names example, Purch, Kurts utt

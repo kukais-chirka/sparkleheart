@@ -30,7 +30,7 @@ $img5  = get_field('img_5') ?: '/wp-content/uploads/2020/10/Anda_2_1.jpg';
         <img class="img2 " src="<?php echo $img2 ?>" alt="Galerijas Bilde#2">
     </div>
 
-    <div class="d-flex ">
+    <div class="d-flex">
         <div class="flex-column-container">
             <img class="img3" src="<?php echo $img3 ?>" alt="Galerijas Bilde#3">
             <img class="img4" src="<?php echo $img4 ?>" alt="Galerijas Bilde#4">

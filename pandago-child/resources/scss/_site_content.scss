@@ -66,6 +66,12 @@ $mobile: 700px;
 .svg-box-container{
     transition: all .5s;
     display: none;
+    transition: all .5s;
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 .svg-box { 
     position: absolute;
@@ -128,9 +134,12 @@ $mobile: 700px;
   }
   //text
   
-  
+
   .gallery-container-1 {//gallery
     display: flex; //fallback Explorer Browser
+    & > div{
+        flex-basis: 50%; //fallback Explorer Browser
+    }
     display: grid;
     grid-template-columns: 1fr 1fr;
     .vector-top {
@@ -176,6 +185,7 @@ $mobile: 700px;
         }
     }
     .gallery-container-1 {
+        display: block;
         flex-direction: column-reverse;
         display: flex;
         .vector-top{display: none;}
@@ -210,6 +220,7 @@ $mobile: 700px;
     margin: 75px 0px;
     display: flex;
     flex-flow: row wrap;
+    justify-content: space-around; // Explorer Fallback
     justify-content: space-evenly;
     align-items: center;
     text-align: center;
@@ -425,6 +436,7 @@ $mobile: 700px;
   .imgRow {
       display: flex;
       flex-flow: row wrap;
+      justify-content: space-around; //Internet Epxplorer Callback
       justify-content: space-evenly;
       align-items: center;
       img{
@@ -439,12 +451,13 @@ $mobile: 700px;
           padding-bottom: 50px;
           img{
             max-height: 80px;
+            max-width: 144px;
           }
       }
-      .imgRow > div{
-        max-width:144px;
-        justify-self: center;
-      }
+    //   .imgRow > div{
+    //     max-width:144px;
+    //     justify-self: center;
+    //   }
   }
   @include mobile {
       .imgRow {
@@ -452,11 +465,12 @@ $mobile: 700px;
         grid-template-columns: 1fr 1fr;
         grid-column-gap: 5px;
         grid-row-gap:42px;
-         & > div{
-           max-width: 130px;
-         }
+        //  & > div{
+        //    max-width: 130px;
+        //  }
          img{
           max-height: 70px;
+          max-width: 130px;
         } 
         }
         .vector-top{
@@ -507,6 +521,7 @@ $mobile: 700px;
   .linear-bg{
     background: linear-gradient(0deg, rgba(47, 72, 88, 0.8) 18.63%, rgba(47, 72, 88, 0) 49.21%);
     height:705px;
+    align-items: flex-end;
     display: flex;
     @include tablet{
     height: 430px;
@@ -517,6 +532,7 @@ $mobile: 700px;
 }
 .text-container{
     text-align:center;
+    width: 100%;
     display: flex;
     padding-bottom: 5%;
     margin: auto auto 0px auto;
@@ -671,6 +687,9 @@ $mobile: 700px;
               width: 160px;
               height: 185px;
           }
+      }
+      .text-box{
+          max-width: 394px; //Internet Explorer
       }
       .balloon-img{
           @include mobile{
@@ -890,6 +909,7 @@ $mobile: 700px;
   .sections{
       display: flex;
       flex-flow: row wrap;
+      justify-content: space-around; // Internet Explorer Fallback 
       justify-content: space-evenly;
       section{
         display: flex;
@@ -1008,7 +1028,7 @@ $mobile: 700px;
 
 .custom-select{ //custom-select
   width: 100%; 
-  height: 43px;
+  max-height: 43px;
   padding: 12px 60px 9px 15px;
   border: 1px solid rgba(196, 196, 196, 0.4);
   border-radius: 6px;
@@ -1080,16 +1100,21 @@ $mobile: 700px;
 }//margin-box
 
 .stories-container{//stories-container 
+    display: flex;
+    flex-flow: wrap;
     display: grid;
     grid-template-columns: repeat(auto-fit, 160px);
-    justify-content: center;
-    row-gap: 14px;
+    row-gap: 11px;
     column-gap: 14px;
     max-width: 1030px;
     margin: auto;
+
     .story-box, .no-story{
         background: url("/wp-content/uploads/2020/10/golden_bg.jpg"); 
         transition: all 0.3s;
+        margin: 3px; // IE 
+        max-width: 160px;
+        width: 100%;
 
         &:hover{cursor: pointer;}
         &:hover img{opacity: 0;}
@@ -1121,6 +1146,8 @@ $mobile: 700px;
     }
     .no-story{
         height: 160px;
+        max-width: 160px;
+        width: 100%;
         &:hover{
             cursor: default;}
     }
@@ -1145,6 +1172,7 @@ $mobile: 700px;
     .stories-container{
     grid-template-columns: repeat(auto-fit, 137px);
     row-gap: 16px;
+    justify-content: center;
         .no-story {
         height: 137px;
         }
